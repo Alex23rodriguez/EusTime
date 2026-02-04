@@ -17,4 +17,4 @@ game = APIGame(
     },
 )
 
-game.start()
+game.start(root_path="/time_quiz")
