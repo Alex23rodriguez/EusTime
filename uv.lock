@@ -62,20 +62,16 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "ezquiz", specifier = ">=0.2.0" }]
+requires-dist = [{ name = "ezquiz", git = "https://github.com/Alex23rodriguez/ezquiz" }]
 
 [[package]]
 name = "ezquiz"
-version = "0.2.0"
-source = { registry = "https://pypi.org/simple" }
+version = "0.2.1"
+source = { git = "https://github.com/Alex23rodriguez/ezquiz#9e5b0fed90e75afc2e9266aa124cbe868f00e486" }
 dependencies = [
     { name = "fastapi" },
     { name = "jinja2" },
     { name = "uvicorn" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/16/f0/7f79cd5a3f8d0bac7227137513a08e8d600daadd18650fccda2fe6abde5d/ezquiz-0.2.0.tar.gz", hash = "sha256:9e647ae07d5ead291b3b1ac8e0c861f6642e36f32d861c55738b86c6f94a028e", size = 15478, upload-time = "2026-02-04T18:47:41.435Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/d2/61058653cf9c5a3873f4cb6cb98dc2c371adef0a55efc71b17c8505ded1f/ezquiz-0.2.0-py3-none-any.whl", hash = "sha256:9f99f29e71129cea23b033f0d478e5f96e3d86c3bf4433d42f3f9d107dc4571e", size = 7243, upload-time = "2026-02-04T18:47:40.395Z" },
 ]
 
 [[package]]
