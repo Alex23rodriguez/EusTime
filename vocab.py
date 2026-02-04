@@ -1,6 +1,6 @@
 from random import choice
 
-from quizzer.quizzer import Prompt, Q
+from quizzer import Q
 
 
 def get_random_day():
@@ -9,11 +9,11 @@ def get_random_day():
     )
 
 
-def days_ask(day: str) -> Prompt:
-    return {"type": "text", "value": day}
+def days_ask(day: str):
+    return day
 
 
-def days_check(day, ans: str):
+def days_correct(day):
     return {
         "lunes": "astelehen",
         "martes": "astearte",
@@ -22,14 +22,13 @@ def days_check(day, ans: str):
         "viernes": "ostiral",
         "sabado": "larunbat",
         "domingo": "igande",
-    }[day] == ans
+    }[day]
 
 
 DaysQ = Q[str](
     get_seed=get_random_day,
     ask=days_ask,
-    check=days_check,
-    explain=lambda _: {"type": "text", "value": ""},
+    correct=days_correct,
 )
 
 
@@ -52,11 +51,11 @@ def get_random_month():
     )
 
 
-def months_ask(month: str) -> Prompt:
-    return {"type": "text", "value": month}
+def months_ask(month: str):
+    return month
 
 
-def months_check(month, ans: str):
+def months_correct(month):
     return {
         "enero": "urtarril",
         "febrero": "ostail",
@@ -70,14 +69,13 @@ def months_check(month, ans: str):
         "octubre": "urri",
         "noviembre": "azaro",
         "diciembre": "abendu",
-    }[month] == ans
+    }[month]
 
 
 MonthsQ = Q[str](
     get_seed=get_random_month,
     ask=months_ask,
-    check=months_check,
-    explain=lambda _: {"type": "text", "value": ""},
+    correct=months_correct,
 )
 
 
@@ -85,22 +83,21 @@ def get_random_season():
     return choice(["primavera", "verano", "otoño", "invierno"])
 
 
-def seasons_ask(season: str) -> Prompt:
-    return {"type": "text", "value": season}
+def seasons_ask(season: str):
+    return season
 
 
-def seasons_check(season, ans: str):
+def seasons_correct(season):
     return {
         "primavera": "udaberri",
         "verano": "uda",
         "otoño": "udazken",
         "invierno": "negu",
-    }[season] == ans
+    }[season]
 
 
 SeasonsQ = Q[str](
     get_seed=get_random_season,
     ask=seasons_ask,
-    check=seasons_check,
-    explain=lambda _: {"type": "text", "value": ""},
+    correct=seasons_correct,
 )

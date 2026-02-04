@@ -1,38 +1,36 @@
-from quizzer.quizzer import Prompt, Q
+from quizzer import Q
 
 from util import get_time_key, get_times
 
 
-def future_singular_ask(seed) -> Prompt:
+def future_singular_ask(seed):
     prompt = "en un " + get_times("s", "es")[seed]
 
-    return {"type": "text", "value": prompt}
+    return prompt
 
 
-def future_singular_check(seed, ans: str):
-    return f"{get_times('s', 'eu')[seed]} batean" == ans
+def future_singular_correct(seed):
+    return f"{get_times('s', 'eu')[seed]} batean"
 
 
-def future_plural_ask(seed) -> Prompt:
+def future_plural_ask(seed):
     prompt = "en dos " + get_times("p", "es")[seed]
 
-    return {"type": "text", "value": prompt}
+    return prompt
 
 
-def future_plural_check(seed, ans: str):
-    return f"bi {get_times('p', 'eu')[seed]}etan" == ans
+def future_plural_correct(seed):
+    return f"bi {get_times('p', 'eu')[seed]}etan"
 
 
 FutureSingularQ = Q[str](
     get_seed=get_time_key,
     ask=future_singular_ask,
-    check=future_singular_check,
-    explain=lambda _: {"type": "text", "value": ""},
+    correct=future_singular_correct,
 )
 
 FuturePluralQ = Q[str](
     get_seed=get_time_key,
     ask=future_plural_ask,
-    check=future_plural_check,
-    explain=lambda _: {"type": "text", "value": ""},
+    correct=future_plural_correct,
 )
