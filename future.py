@@ -1,4 +1,4 @@
-from quizzer import Q
+from ezquiz import Q
 
 from util import get_time_key, get_times
 

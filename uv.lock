@@ -58,11 +58,25 @@ name = "eustimeframe"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "quizzer" },
+    { name = "ezquiz" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "quizzer", directory = "../../../Repos/quizzer" }]
+requires-dist = [{ name = "ezquiz", specifier = ">=0.2.0" }]
+
+[[package]]
+name = "ezquiz"
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "fastapi" },
+    { name = "jinja2" },
+    { name = "uvicorn" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/16/f0/7f79cd5a3f8d0bac7227137513a08e8d600daadd18650fccda2fe6abde5d/ezquiz-0.2.0.tar.gz", hash = "sha256:9e647ae07d5ead291b3b1ac8e0c861f6642e36f32d861c55738b86c6f94a028e", size = 15478, upload-time = "2026-02-04T18:47:41.435Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/31/d2/61058653cf9c5a3873f4cb6cb98dc2c371adef0a55efc71b17c8505ded1f/ezquiz-0.2.0-py3-none-any.whl", hash = "sha256:9f99f29e71129cea23b033f0d478e5f96e3d86c3bf4433d42f3f9d107dc4571e", size = 7243, upload-time = "2026-02-04T18:47:40.395Z" },
+]
 
 [[package]]
 name = "fastapi"
@@ -191,23 +205,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5c/96/5fb7d8c3c17bc8c62fdb031c47d77a1af698f1d7a406b0f79aaa1338f9ad/pydantic_core-2.41.5-cp314-cp314t-win32.whl", hash = "sha256:b4ececa40ac28afa90871c2cc2b9ffd2ff0bf749380fbdf57d165fd23da353aa", size = 1988906, upload-time = "2025-11-04T13:41:56.606Z" },
     { url = "https://files.pythonhosted.org/packages/22/ed/182129d83032702912c2e2d8bbe33c036f342cc735737064668585dac28f/pydantic_core-2.41.5-cp314-cp314t-win_amd64.whl", hash = "sha256:80aa89cad80b32a912a65332f64a4450ed00966111b6615ca6816153d3585a8c", size = 1981607, upload-time = "2025-11-04T13:41:58.889Z" },
     { url = "https://files.pythonhosted.org/packages/9f/ed/068e41660b832bb0b1aa5b58011dea2a3fe0ba7861ff38c4d4904c1c1a99/pydantic_core-2.41.5-cp314-cp314t-win_arm64.whl", hash = "sha256:35b44f37a3199f771c3eaa53051bc8a70cd7b54f333531c59e29fd4db5d15008", size = 1974769, upload-time = "2025-11-04T13:42:01.186Z" },
-]
-
-[[package]]
-name = "quizzer"
-version = "0.2.0"
-source = { directory = "../../../Repos/quizzer" }
-dependencies = [
-    { name = "fastapi" },
-    { name = "jinja2" },
-    { name = "uvicorn" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastapi", specifier = ">=0.128.0" },
-    { name = "jinja2", specifier = ">=3.1.6" },
-    { name = "uvicorn", specifier = ">=0.40.0" },
 ]
 
 [[package]]

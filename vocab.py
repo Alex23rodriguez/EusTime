@@ -1,6 +1,6 @@
 from random import choice
 
-from quizzer import Q
+from ezquiz import Q
 
 
 def get_random_day():

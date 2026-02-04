@@ -1,4 +1,4 @@
-from quizzer import APIGame
+from ezquiz import APIGame
 
 from future import FuturePluralQ, FutureSingularQ
 from past import PastPluralQ, PastSingularQ
