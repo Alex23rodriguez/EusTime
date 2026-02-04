@@ -14,7 +14,7 @@ def past_singular_correct(seed):
 
 
 def past_plural_ask(seed):
-    prompt = "hace un " + get_times("p", "es")[seed]
+    prompt = "hace dos " + get_times("p", "es")[seed]
 
     return prompt
 
