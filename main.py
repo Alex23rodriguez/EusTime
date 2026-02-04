@@ -17,4 +17,4 @@ game = APIGame(
     },
 )
 
-game.start(root_path="/time_quiz")
+game.start(host="0.0.0.0", port=8000, root_path="/time_quiz")
