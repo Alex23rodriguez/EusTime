@@ -67,8 +67,8 @@ requires-dist = [{ name = "ezquiz", git = "https://github.com/Alex23rodriguez/ez
 
 [[package]]
 name = "ezquiz"
-version = "0.2.1"
-source = { git = "https://github.com/Alex23rodriguez/ezquiz#97563ee5918871708eb0b874283bbea023c0d066" }
+version = "0.5.0"
+source = { git = "https://github.com/Alex23rodriguez/ezquiz#a9beeae979b6c53c179b992e2c72cb6815e11f79" }
 dependencies = [
     { name = "fastapi" },
     { name = "jinja2" },
